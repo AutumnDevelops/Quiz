@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+    <link rel = "stylesheet" href = "styles/main.css">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<style>
+
+</style>
+<body id = "body">
+<main id = "quiz_area"> 
+<div id = "overhead">
+        <div>
+                <h4><i class="fa-regular fa-star"></i>Question</h4>
+                        <h3 id = "question_number">1 / 10</h3>               
+        </div>
+        <div>
+                <h4><i class="fa-regular fa-star"></i>Score</h4>
+                        <h3 id = "score">0</h3>
+        </div>
+        <div>
+                <h4><i class="fa-regular fa-star"></i>Seconds</h4>
+                        <h3 id = "countdown">00</h3>
+        </div>
+</div>
+
+<div id = "question_area">
+            <h2 id = "question"></h2>
+                <div id = "answer_area">
+                        <div class = "answer">
+                        <h4><span class = "letter">A</span> <span class = "answer_text" data-number="1"></span></h4> 
+                        </div>
+                        <div class = "answer">
+                        <h4><span class = "letter">B</span> <span class = "answer_text" data-number="2"></span></h4> 
+                        </div>
+                        <div class = "answer">
+                        <h4><span  class = "letter">C</span> <span class = "answer_text" data-number="3"></span></h4> 
+                        </div>
+                        <div class = "answer">
+                        <h4><span class = "letter">D</span> <span class = "answer_text" data-number="4"></span></h4> 
+                        </div>
+                </div>
+</div>
+</main>
+
+    </body>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src = "script/game.js"></script>
+
+    </html>

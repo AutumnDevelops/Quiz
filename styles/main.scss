@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Courgette&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*, *::before, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin basic_flex(){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin background{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+$background:rgba(221, 243, 242, .75);
+$border:rgb(150, 146, 97);
+
+$header_font:'Courgette', cursive;
+$main_font:'Almarai', sans-serif;;
+
+$header_color:rgb(13, 32, 69);
+
+$shadow:0 0 20px 5px rgb(150, 146, 97, 0.5);
+
+
+body{
+    @include basic_flex();
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: url(../img/background.jpg.png);
+    @include background();
+    main{
+        @include basic_flex();
+        text-align: center;
+        height: 600px;
+        width: 340px;
+        @media(min-width: 799px){
+        height: 500px;
+        width: 500px;
+        }
+        background: $background;
+        border: 1px solid $border;
+        border-radius: 25px;
+        box-shadow: $shadow;
+        header{
+        text-align: center;
+        align-items: center;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        font-family: $header_font;
+        color: $header_color;
+        font-size: 30px;
+            i{
+            margin:  0px 15px;
+            color:$border;
+            text-shadow: $shadow;
+            animation: i_jump 1s ease infinite;
+            }
+        }
+        #rule_box{
+            font-family: $main_font;
+            font-size: 12px;
+            h2{
+            text-align: center;
+            font-family: $header_font;
+            font-style: 20px;
+            i{
+            animation: i_jump 1s ease infinite;
+            margin:  0px 15px;
+            color:$border;
+            text-shadow: $shadow;
+            }
+            }
+            ul{
+                padding: 5px 10px;
+            li{
+                list-style-type: none;
+                padding: 5px;
+                font-size: 18px;
+                color:$header_color;
+         }}}
+
+        #quiz_area{
+            width: 500px;
+            height: 400px;
+        }
+        #button_box{
+            width: 100%;
+            @include basic_flex();
+                a{
+                    text-decoration: none;
+                    font-family: $main_font;
+                    font-weight: 600;
+                    color:$background;
+                    background: $header_color;
+                    margin-top: 15px;
+                    padding: 5px;
+                    border-radius: 15px;
+                    border: 1px solid $border;
+                    width: 250px;
+                    text-align: center;
+                        i{
+                        color: $border;
+                        margin: 0px 5px;
+                        opacity: 0;
+                        }
+                        &:hover{
+                        cursor: pointer;
+                    }
+
+        }}
+    }
+}
+
+#quiz_area{
+    width: 340px;
+    height: 600px;
+    padding: 5px;
+    @media(min-width:799px){
+    width: 600px;
+    height: 700px;
+    }
+    #overhead{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        margin-bottom: 5px;
+        @media(min-width:799px){
+        margin-bottom: 25px;
+        }
+        h4{
+        font-family: $main_font;
+        color:$header_color;
+        font-size: 14px;
+            @media(min-width:799px){
+                font-size: 18px;
+                }
+                i{
+                    margin: 0px 5px;
+                    color:$border;
+                }
+            }
+            h3{
+                text-align: center;
+                color:$border;
+                font-size: 20px;
+                font-family: $main_font;
+                font-weight: 600;
+                @media(min-width:799px){
+                    font-size: 25px;
+                    margin-top: 25px;
+                }
+            }
+    }
+    #question_area{
+        font-family: $main_font;
+        text-align: center;
+        color:$header_color;
+        font-size: 14px;
+        @media(min-width:799px){
+            font-size: 16px;
+        }
+        
+        #answer_area{
+            margin: 15px;
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+                .answer{
+                    width: 105%;
+                    height: 40px;
+                    margin: 10px auto;
+                    background: rgb(255, 255, 255, 0.5);
+                    font-family: $main_font;
+                    box-shadow:$shadow;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    h4{
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        &:hover{
+                            .letter{
+                                width: 33%;
+                            }
+                        }
+
+                        .letter{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: $header_color;
+                            width: 23%;
+                            color:$background;
+                            border-radius: 5px 0 0 5px;
+                            transition: 1s;
+                            cursor: pointer;
+                    }
+                    .answer_text{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 66%;
+                        text-align: center;
+    }}}}}
+}
+
+#end_page{
+    padding: 25px;
+    height: 600px;
+    font-family: $main_font;
+    header{
+    display: flex;
+    flex-direction: column;
+        h2{
+            font-family: $main_font;
+            font-size: 18px;
+        }
+        h1{
+            font-size: 22px;
+            font-family: $main_font;
+        }
+        h3{
+            font-size: 18px; 
+            font-family: $main_font;
+        }
+        #input_area{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 15px;
+            margin-top: 15px;
+        label{
+            font-family: $header_font;
+            font-size: 18px;
+        }
+        input{
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid $header_color;
+        }
+    }}
+    #button_box{
+        margin-top: -10px;
+        a{
+            text-decoration: none;
+            font-family: $main_font;
+            font-weight: 600;
+            color:$background;
+            background: $header_color;
+            margin-top: 20px;
+            padding: 5px;
+            border-radius: 15px;
+            border: 1px solid $border;
+            width: 250px;
+            text-align: center;
+    }
+}}
+
+#highscore_box{
+    height: 600px;
+    header{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h2{
+        font-size:33px;
+        font-family: $main_font;
+        }
+        h3{
+        font-size: 28px;
+        font-family: $main_font;
+        }}
+        ul{
+        font-family: $main_font;
+        list-style-type:none;
+        height: 200px;
+            li{
+            font-weight: 600;
+            font-size: 35px;
+            color:$header_color;
+            i{
+            color:$border;
+                }}}
+
+    #button_box{
+        margin-bottom: 45px;
+        .button{
+             padding: 5px;
+    }}}

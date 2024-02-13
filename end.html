@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+        <link rel = "stylesheet" href = "styles/main.css">
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <main id = "end_page">
+            <header>
+                <h2>Your Score</h2>
+                <div id  = "score_area">
+                <h1><i class="fa-regular fa-star"></i><span id = "your_score"></span><i class="fa-regular fa-star"></i></h1>
+            </div>    
+                <h3>Out of 10</h3>
+                    <div id = "input_area">
+                        <label for = "user">Enter your Name...</label>
+                        <div id = "input_fields">
+                            <input type ="text" name = "user" class = "user"  name = "name">
+                            <input type = "submit" value = "submit" class= "button" id = "submit">
+                    </div></div>
+            </header>
+        
+            <div id = "button_box">
+                <a class = "button" href = "highscore.html"><i class="fa-solid fa-star"></i>Play<i class="fa-solid fa-star"></i></a>
+                <a class = "button" href = "index.html"><i class="fa-solid fa-star"></i>Home<i class="fa-solid fa-star"></i></a>
+                <a class = "button" href = "game.html"><i class="fa-solid fa-star"></i>Play Again<i class="fa-solid fa-star"></i></a>
+            </div>
+    </main>
+
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src ="script/end.js"></script>
+
+</body>
+</html>
